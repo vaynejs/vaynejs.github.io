@@ -5,9 +5,9 @@ deploy:
 	yarn run deploy
 
 push:
-	git pull origin develop
+	git pull origin master
 	git add .
 	git commit -m 'update doc'
-	git push origin develop
+	git push origin master
 
 pub: deploy push
