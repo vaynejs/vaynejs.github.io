@@ -1,0 +1,32 @@
+{
+  "name": "vaynejs.github.io",
+  "version": "1.0.0",
+  "description": "vayne 文档",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf _book && gitbook build",
+    "dev": "gitbook serve",
+    "deploy": "npm run build && gh-pages -b master -d ./_book"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vaynejs/vaynejs.github.io.git"
+  },
+  "keywords": [
+    "vayne"
+  ],
+  "author": "xierenyuan@qq.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vaynejs/vaynejs.github.io/issues"
+  },
+  "homepage": "https://vaynejs.github.io",
+  "devDependencies": {
+    "gh-pages": "^1.1.0",
+    "gitbook-cli": "^2.3.2",
+    "gitbook-plugin-disqus": "^1.0.1",
+    "gitbook-plugin-prism": "^2.3.0",
+    "gitbook-plugin-search-pro": "^2.0.2",
+    "gitbook-plugin-toc": "^0.0.2"
+  }
+}

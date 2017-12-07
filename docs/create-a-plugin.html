@@ -1,0 +1,504 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>开发一个插件 · vayne</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="migration-guide.html" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    vayne
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    开始
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="intro.html">
+            
+                <a href="intro.html">
+            
+                    
+                    安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="example.html">
+            
+                <a href="example.html">
+            
+                    
+                    列子
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    使用
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="config.html">
+            
+                <a href="config.html">
+            
+                    
+                    配置参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="plugins.html">
+            
+                <a href="plugins.html">
+            
+                    
+                    插件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    扩展
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.4.1" data-path="create-a-plugin.html">
+            
+                <a href="create-a-plugin.html">
+            
+                    
+                    开发一个插件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="migration-guide.html">
+            
+                <a href="migration-guide.html">
+            
+                    
+                    迁移指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    教程
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="faq.html">
+            
+                <a href="faq.html">
+            
+                    
+                    一些问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >开发一个插件</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x5F00;&#x53D1;&#x4E00;&#x4E2A;&#x63D2;&#x4EF6;">&#x5F00;&#x53D1;&#x4E00;&#x4E2A;&#x63D2;&#x4EF6;</h1>
+<p>vayne &#x63D2;&#x4EF6;&#x7684;&#x672C;&#x8D28;&#x662F;&#x63D0;&#x4F9B; loader plugins &#x914D;&#x7F6E;&#x548C; &#x4F9D;&#x8D56; &#x4E0D;&#x540C;&#x63D2;&#x4EF6;&#x6269;&#x5C55;&#x7684;&#x914D;&#x7F6E;&#x5E94;&#x8BE5;&#x662F;&#x72EC;&#x7ACB;&#x7684;&#xFF0C;&#x4E92;&#x4E0D;&#x5E72;&#x6270;&#x3002;&#x9ED8;&#x8BA4;&#x63D2;&#x4EF6;&#x7684;&#x662F;&#x5168;&#x5C40;&#x7684; &#x4E0D;&#x7BA1;&#x662F;&#x751F;&#x6210;&#x73AF;&#x5883;&#x8FD8;&#x662F;&#x5F00;&#x53D1;&#x73AF;&#x5883;&#x7684;&#x4F1A;&#x4F7F;&#x7528;&#x63D2;&#x4EF6;&#x7684;&#x914D;&#x7F6E;&#x548C;&#x4F9D;&#x8D56; &#x4E4B;&#x540E;&#x4F1A;&#x8003;&#x8651;&#x63D0;&#x4F9B;&#x65B0;&#x7684;&#x63A5;&#x53E3;
+&#x9488;&#x5BF9; &#x5F00;&#x53D1;&#x73AF;&#x5883;&#x548C;&#x751F;&#x6210;&#x73AF;&#x5883;</p>
+<p>&#x4E00;&#x4E2A;&#x63D2;&#x4EF6;&#x5982;&#x4E0B;</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">const</span> _ <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;lodash&apos;</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> StyleLintPlugin <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;stylelint-webpack-plugin&apos;</span><span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">// &#x9ED8;&#x8BA4;&#x914D;&#x7F6E;</span>
+<span class="token keyword">const</span> defaultOptions <span class="token operator">=</span> <span class="token punctuation">{</span>
+  files<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&apos;src/**/*.vue&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;src/**/*.scss&apos;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  syntax<span class="token punctuation">:</span> <span class="token string">&apos;scss&apos;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">/**
+ *
+ * vayne stylelint &#x63D2;&#x4EF6;
+ * @param {any} config vayne &#x914D;&#x7F6E;
+ * @param {any} log  vayne log
+ * @param {any} utils vayne &#x5DE5;&#x5177;&#x5E93;
+ * @returns webpack stylelint plugins
+ */</span>
+<span class="token keyword">class</span> <span class="token class-name">VaynePluginStyleLint</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span>config<span class="token punctuation">,</span> log<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    log<span class="token punctuation">.</span><span class="token function">debug</span><span class="token punctuation">(</span><span class="token string">&apos;&#x5F00;&#x59CB;&#x89E3;&#x6790; vayne stylelint &#x63D2;&#x4EF6;&apos;</span><span class="token punctuation">)</span>
+    <span class="token keyword">let</span> styleLint <span class="token operator">=</span> config<span class="token punctuation">.</span>styleLint <span class="token operator">||</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token keyword">let</span> opts <span class="token operator">=</span> _<span class="token punctuation">.</span><span class="token function">defaultsDeep</span><span class="token punctuation">(</span>defaultOptions<span class="token punctuation">,</span> styleLint<span class="token punctuation">)</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>styleLint<span class="token punctuation">.</span>files<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      opts<span class="token punctuation">.</span>files <span class="token operator">=</span> _<span class="token punctuation">.</span><span class="token function">union</span><span class="token punctuation">(</span>defaultOptions<span class="token punctuation">.</span>files<span class="token punctuation">,</span> styleLint<span class="token punctuation">.</span>files<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    log<span class="token punctuation">.</span><span class="token function">debug</span><span class="token punctuation">(</span>opts<span class="token punctuation">)</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">&apos;VaynePluginStyleLint&apos;</span>
+
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      plugins<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+        <span class="token keyword">new</span> <span class="token class-name">StyleLintPlugin</span><span class="token punctuation">(</span>opts<span class="token punctuation">)</span>
+      <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> VaynePluginStyleLint
+</code></pre>
+<h2 id="&#x89C4;&#x5B9A;">&#x89C4;&#x5B9A;</h2>
+<ul>
+<li>&#x63D2;&#x4EF6;&#x5FC5;&#x987B; &#x5B9A;&#x4E49; <strong>name</strong> &#x5982; VaynePluginStyleLint</li>
+<li>&#x63D2;&#x4EF6;&#x4F7F;&#x7528; vayne-plugin-* &#x547D;&#x540D;</li>
+<li>&#x63D2;&#x4EF6; &#x5FC5;&#x987B;&#x8FD4;&#x56DE; &#x4E00;&#x4E2A;&#x5BF9;&#x8C61; &#x5982;&#x662F;webpack &#x63D2;&#x4EF6;&#x8FD4;&#x56DE;<strong>plugins</strong> &#x5982;&#x679C;&#x662F;loader &#x5219;&#x8FD4;&#x56DE; <strong>loaders</strong></li>
+</ul>
+<h2 id="&#x914D;&#x7F6E;">&#x914D;&#x7F6E;</h2>
+<ul>
+<li>&#x63D2;&#x4EF6;&#x6240;&#x9700;&#x7684;&#x914D;&#x7F6E; &#x901A;&#x8FC7; config &#x8FD4;&#x56DE;&#x547D;&#x540D;&#x4EE5;&#x63D2;&#x4EF6; &#x540D;&#x4E3A;&#x51C6; &#x5982;: vayne-plugin-styleLint &#x63D2;&#x4EF6; &#x914D;&#x7F6E;&#x5728;vayne &#x914D;&#x7F6E;&#x4E2D;&#x5199;&#x5728; &#x5BF9;&#x8C61;styleLint &#x4E2D; &#x5982;&#x4E0B;</li>
+</ul>
+<pre class="language-"><code class="lang-js"><span class="token string">&apos;use strict&apos;</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  plugins<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+    <span class="token string">&apos;vayne-plugin-vue&apos;</span><span class="token punctuation">,</span>
+    <span class="token string">&apos;vayne-plugin-stylelint&apos;</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  styleLint<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    files<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&apos;scss/**/*.scss&apos;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    syntax<span class="token punctuation">:</span> <span class="token string">&apos;scss&apos;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  dev<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    showEslintErrorsInOverlay<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    proxyTable<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token string">&apos;/v2&apos;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        target<span class="token punctuation">:</span> <span class="token string">&apos;https://api.douban.com/&apos;</span><span class="token punctuation">,</span>
+        changeOrigin<span class="token punctuation">:</span> <span class="token boolean">true</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="&#x4F9D;&#x8D56;">&#x4F9D;&#x8D56;</h2>
+<p>&#x6240;&#x9700;&#x4F9D;&#x8D56;&#x914D;&#x7F6E;&#x5728; package.json &#x7684; dependencies &#x5185;</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+  <span class="token property">&quot;dependencies&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;stylelint-webpack-plugin&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^0.9.0&quot;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="&#x4F7F;&#x7528;">&#x4F7F;&#x7528;</h2>
+<p>&#x6700;&#x540E;&#x53EF;&#x53D1;&#x5E03;&#x5728;npm &#x4E2D; &#x4F7F;&#x7528; npm &#x6216;&#x8005;yarn &#x6765;&#x5B89;&#x88C5;&#x4F7F;&#x7528; &#x4EE5;&#x53EF;&#x76F4;&#x63A5;require &#x5F15;&#x5165;&#x8BBF;&#x95EE; &#x5982;&#x4E0B;</p>
+<pre class="language-"><code class="lang-js"><span class="token string">&apos;use strict&apos;</span>
+<span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;path&apos;</span><span class="token punctuation">)</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  plugins<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+    <span class="token comment" spellcheck="true">// require(&apos;./vayne.plugin.angular&apos;) &#x76F4;&#x63A5;&#x4F7F;&#x7528;</span>
+    <span class="token string">&apos;vayne-plugin-angularjs&apos;</span> <span class="token comment" spellcheck="true">//  npm &#x4F7F;&#x7528;</span>
+    <span class="token comment" spellcheck="true">// &apos;angularjs&apos; npm &#x7B80;&#x5199;&#x4F7F;&#x7528;</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  externals<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&apos;angular&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;angular&apos;</span><span class="token punctuation">,</span>
+    <span class="token string">&apos;angular-ui-router&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;&quot;ui.router&quot;&apos;</span><span class="token punctuation">,</span>
+    <span class="token string">&apos;angular-animate&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;&quot;ngAnimate&quot;&apos;</span><span class="token punctuation">,</span>
+    <span class="token string">&apos;angular-aria&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;&quot;ngAria&quot;&apos;</span><span class="token punctuation">,</span>
+    <span class="token string">&apos;angular-material&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;&quot;ngMaterial&quot;&apos;</span><span class="token punctuation">,</span>
+    <span class="token string">&apos;jquery&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;jQuery&apos;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="migration-guide.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 迁移指南">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"开发一个插件","level":"1.4.1","depth":2,"next":{"title":"迁移指南","level":"1.4.2","depth":2,"path":"docs/migration-guide.md","ref":"docs/migration-guide.md","articles":[]},"previous":{"title":"扩展","level":"1.4","depth":1,"ref":"","articles":[{"title":"开发一个插件","level":"1.4.1","depth":2,"path":"docs/create-a-plugin.md","ref":"docs/create-a-plugin.md","articles":[]},{"title":"迁移指南","level":"1.4.2","depth":2,"path":"docs/migration-guide.md","ref":"docs/migration-guide.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["toc","-search","search-pro","disqus","prism","-highlight"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"search-pro":{"cutWordLib":"nodejieba"},"disqus":{"useIdentifier":false,"shortName":"vaynejs"},"toc":{},"prism":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"vayne","language":"zh-hans","gitbook":"*"},"file":{"path":"docs/create-a-plugin.md","mtime":"2017-12-07T18:57:58.755Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-12-07T19:20:10.707Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
